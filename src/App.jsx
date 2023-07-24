@@ -51,7 +51,20 @@ function App() {
   const totalClick = (event) => {
     setTotal(event);
   };
-
+  // const [runningTotal, setrunningTotalState] = useState([]);
+  // const setrunningTotal = (event) => {
+  //   setrunningTotalState(
+  //     totalState.statecoffee +
+  //       totalState.statefrap +
+  //       totalState.statesyrup +
+  //       totalState.statecream +
+  //       totalState.statelemonade +
+  //       totalState.statetea +
+  //       totalState.statehardware
+  //   );
+  //   console.log(totalState);
+  //   console.log(runningTotal);
+  // };
   return (
     <>
       <NavBar />
@@ -88,15 +101,15 @@ function App() {
           subtotal={hardwareState}
         />
         <Total
-          total={Number(
-            coffeeState +
-              frapState +
-              syrupState +
-              creamState +
-              lemonadeState +
-              teaState +
-              hardwareState
-          )}
+          total={
+            Number(coffeeState) +
+            Number(frapState) +
+            Number(syrupState) +
+            Number(creamState) +
+            Number(lemonadeState) +
+            Number(teaState) +
+            Number(hardwareState)
+          }
         />
       </div>
     </>

@@ -8,4 +8,5 @@ export default function Total({ total }) {
 }
 Total.propTypes = {
   total: PropTypes.number,
+  onClick: PropTypes.any,
 };

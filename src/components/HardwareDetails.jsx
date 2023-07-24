@@ -4,31 +4,37 @@ export default function Hardwaredetails({ onClick, tonClick, subtotal }) {
     console.log();
     if (event.target.Nitro.checked && event.target.Blender.checked) {
       onClick(Number(event.target.Hourscart.value) * 35);
+      tonClick({ statehardware: Number(event.target.Hourscart.value) * 35 });
     } else if (event.target.Nitro.checked && !event.target.Blender.checked) {
       onClick(Number(event.target.Hourscart.value) * 25);
+      tonClick({ statehardware: Number(event.target.Hourscart.value) * 25 });
     } else if (
       event.target.Blender.checked &&
       !event.target.Nitro.checked &&
       event.target.Cold.checked
     ) {
       onClick(Number(event.target.Hourscart.value) * 20);
+      tonClick({ statehardware: Number(event.target.Hourscart.value) * 20 });
     } else if (
       event.target.Blender.checked &&
       !event.target.Nitro.checked &&
       !event.target.Cold.checked
     ) {
       onClick(Number(event.target.Hourscart.value) * 10);
+      tonClick({ statehardware: Number(event.target.Hourscart.value) * 10 });
     } else if (
       !event.target.Blender.checked &&
       !event.target.Nitro.checked &&
       event.target.Cold.checked
     ) {
       onClick(Number(event.target.Hourscart.value) * 10);
+      tonClick({ statehardware: Number(event.target.Hourscart.value) * 10 });
     }
   };
   const removeClick = (event) => {
     event.preventDefault();
     onClick(0);
+    tonClick({ statehardware: 0 });
   };
   return (
     <div className="m-4 mx-auto max-w-sm overflow-hidden rounded bg-slate-300 shadow-2xl">
