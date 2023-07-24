@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 export default function Total({ total }) {
   return (
     <div className="m-4 mx-auto max-w-sm overflow-hidden rounded bg-slate-300 shadow-2xl">
@@ -5,3 +6,6 @@ export default function Total({ total }) {
     </div>
   );
 }
+Total.propTypes = {
+  total: PropTypes.number,
+};
