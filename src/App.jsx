@@ -11,31 +11,31 @@ import Total from "./components/Total";
 import NavBar from "./components/NavBar";
 
 function App() {
-  const [coffeeState, setCoffee] = useState();
+  const [coffeeState, setCoffee] = useState([]);
   const coffeeClick = (event) => {
     setCoffee(event);
   };
-  const [frapState, setFrap] = useState();
+  const [frapState, setFrap] = useState([]);
   const frapClick = (event) => {
     setFrap(event);
   };
-  const [syrupState, setSyrup] = useState();
+  const [syrupState, setSyrup] = useState([]);
   const syrupClick = (event) => {
     setSyrup(event);
   };
-  const [creamState, setCreams] = useState();
+  const [creamState, setCreams] = useState([]);
   const creamClick = (event) => {
     setCreams(event);
   };
-  const [lemonadeState, setLemonade] = useState();
+  const [lemonadeState, setLemonade] = useState([]);
   const lemonadeClick = (event) => {
     setLemonade(event);
   };
-  const [teaState, setTea] = useState();
+  const [teaState, setTea] = useState([]);
   const teaClick = (event) => {
     setTea(event);
   };
-  const [hardwareState, setHardware] = useState();
+  const [hardwareState, setHardware] = useState([]);
   const hardwareClick = (event) => {
     setHardware(event);
   };
@@ -88,15 +88,15 @@ function App() {
           subtotal={hardwareState}
         />
         <Total
-          total={
+          total={Number(
             coffeeState +
-            frapState +
-            syrupState +
-            creamState +
-            lemonadeState +
-            teaState +
-            hardwareState
-          }
+              frapState +
+              syrupState +
+              creamState +
+              lemonadeState +
+              teaState +
+              hardwareState
+          )}
         />
       </div>
     </>
