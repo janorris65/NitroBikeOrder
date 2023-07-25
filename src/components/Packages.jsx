@@ -1,3 +1,4 @@
+import ChocolateMilk from "../../assets/IMG_5845.jpg";
 export default function Packages() {
   return (
     <div className="m-4 mx-auto max-w-md overflow-hidden rounded border-4 border-gray-600 bg-emerald-300 shadow-2xl">
@@ -5,7 +6,7 @@ export default function Packages() {
       <form>
         <div className="m-4 mx-auto max-w-sm flex-col overflow-hidden rounded bg-slate-300 text-center shadow-2xl">
           <h3>Box Seats</h3>
-          <img alt="Pic of Nitros, Fraps, Lemonades"></img>
+          <img src={ChocolateMilk} alt="Pic of Nitros, Fraps, Lemonades"></img>
           <p>
             Enjoy the best of the experience. Rich Nitro Cold Brew, Cold
             Frappuccinos, and Refreshing Lemonades
@@ -82,7 +83,10 @@ export default function Packages() {
         </div>
         <div className="m-4 mx-auto max-w-sm flex-col overflow-hidden rounded bg-slate-300 text-center shadow-2xl">
           <h3>Outfield</h3>
-          <img alt="Pic of Iced Cold Brews, Fraps, Lemonades"></img>
+          <img
+            src={ChocolateMilk}
+            alt="Pic of Iced Cold Brews, Fraps, Lemonades"
+          ></img>
           <p>
             Enjoy the excitement to front row big events with Iced Cold Brew,
             Frappuccinos, and Select Lemonades
@@ -156,7 +160,10 @@ export default function Packages() {
         </div>
         <div className="m-4 mx-auto max-w-sm flex-col overflow-hidden rounded bg-slate-300 text-center shadow-2xl">
           <h3>Upper Deck</h3>
-          <img alt="Pic of Iced Cold Brews and Lemonades"></img>
+          <img
+            src={ChocolateMilk}
+            alt="Pic of Iced Cold Brews and Lemonades"
+          ></img>
           <p>Take it all in! Enjoy Rich Iced Cold Brew and Sweet Lemonades</p>
           <div className="flex  justify-evenly">
             <input
@@ -230,7 +237,7 @@ export default function Packages() {
         </div>
         <div className="m-4 mx-auto max-w-sm flex-col overflow-hidden rounded bg-slate-300 text-center shadow-2xl">
           <h3>All Star Break</h3>
-          <img alt="Pic of Fraps and Lemonades"></img>
+          <img src={ChocolateMilk} alt="Pic of Fraps and Lemonades"></img>
           <p>
             Sit back and relax! Enjoy Refreshing Lemonades and Cold Frappuccinos
           </p>
@@ -306,7 +313,7 @@ export default function Packages() {
         </div>
         <div className="m-4 mx-auto max-w-sm flex-col overflow-hidden rounded bg-slate-300 text-center shadow-2xl">
           <h3>Designated Hitter</h3>
-          <img alt="Pic of Nitros, Lemonades"></img>
+          <img src={ChocolateMilk} alt="Pic of Nitros, Lemonades"></img>
           <p>
             Classic Clutch Performance. Rich Nitro Cold Brew and Refreshing
             Lemonades
