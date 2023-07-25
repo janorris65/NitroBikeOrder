@@ -1,5 +1,17 @@
+import PropTypes from "prop-types";
 import ChocolateMilk from "../../assets/IMG_5845.jpg";
-export default function Packages() {
+export default function Packages({
+  OnBox,
+  OnOut,
+  OnDeck,
+  OnStar,
+  OnD,
+  boxtotal,
+  outtotal,
+  decktotal,
+  startotal,
+  dtotal,
+}) {
   return (
     <div className="m-4 mx-auto max-w-md overflow-hidden rounded border-4 border-gray-600 bg-emerald-300 shadow-2xl">
       <h2>Packages</h2>
@@ -403,19 +415,22 @@ export default function Packages() {
             className="m-2 mx-auto rounded border border-slate-800 bg-transparent px-4 py-2 font-semibold text-slate-700 hover:border-transparent hover:bg-slate-500 hover:text-white"
             type="submit"
           >
-            Add to Order
+            Get Estimate
           </button>
         </div>
-        <div className="mx-8">Subtotal: </div>
       </form>
-      <div className="flex-col text-center">
-        <button
-          className="m-2 mx-auto rounded border border-slate-800 bg-transparent px-4 py-2 font-semibold text-slate-700 hover:border-transparent hover:bg-slate-500 hover:text-white"
-          type="click"
-        >
-          Remove from Order
-        </button>
-      </div>
     </div>
   );
 }
+Packages.propTypes = {
+  boxtotal: PropTypes.number,
+  onBox: PropTypes.any,
+  outtotal: PropTypes.number,
+  onOut: PropTypes.any,
+  decktotal: PropTypes.number,
+  onDeck: PropTypes.any,
+  startotal: PropTypes.number,
+  onStar: PropTypes.any,
+  dtotal: PropTypes.number,
+  onD: PropTypes.any,
+};

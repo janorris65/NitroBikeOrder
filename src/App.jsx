@@ -52,20 +52,27 @@ function App() {
   const totalClick = (event) => {
     setTotal(event);
   };
-  // const [runningTotal, setrunningTotalState] = useState([]);
-  // const setrunningTotal = (event) => {
-  //   setrunningTotalState(
-  //     totalState.statecoffee +
-  //       totalState.statefrap +
-  //       totalState.statesyrup +
-  //       totalState.statecream +
-  //       totalState.statelemonade +
-  //       totalState.statetea +
-  //       totalState.statehardware
-  //   );
-  //   console.log(totalState);
-  //   console.log(runningTotal);
-  // };
+
+  const [boxState, setboxState] = useState([]);
+  const BoxClick = (event) => {
+    setboxState(event);
+  };
+  const [outState, setoutState] = useState([]);
+  const OutClick = (event) => {
+    setoutState(event);
+  };
+  const [deckState, setdeckState] = useState([]);
+  const DeckClick = (event) => {
+    setdeckState(event);
+  };
+  const [starState, setstarState] = useState([]);
+  const StarClick = (event) => {
+    setstarState(event);
+  };
+  const [dState, setdState] = useState([]);
+  const DClick = (event) => {
+    setdState(event);
+  };
   return (
     <>
       <NavBar />
@@ -101,16 +108,25 @@ function App() {
           tonClick={totalClick}
           subtotal={hardwareState}
         /> */}
-        <Packages />
+        <Packages
+          OnBox={BoxClick}
+          boxtotal={boxState}
+          OnOut={OutClick}
+          outtotal={outState}
+          OnDeck={DeckClick}
+          decktotal={deckState}
+          OnStar={StarClick}
+          startotal={starState}
+          OnD={DClick}
+          dtotal={dState}
+        />
         <Total
           total={
-            Number(coffeeState) +
-            Number(frapState) +
-            Number(syrupState) +
-            Number(creamState) +
-            Number(lemonadeState) +
-            Number(teaState) +
-            Number(hardwareState)
+            Number(boxState) +
+            Number(outState) +
+            Number(deckState) +
+            Number(starState) +
+            Number(dState)
           }
         />
       </div>
