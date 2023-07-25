@@ -5,8 +5,12 @@ export default function NavBar() {
         NitroBike
       </h1>
       <ol className="flex flex-row justify-evenly">
-        <li className="bg-gradient-to-r from-emerald-600 to-slate-800 bg-clip-text text-2xl font-extrabold text-transparent">
-          Scheduling
+        <li>
+          <a href="https://calendly.com/janorris65">
+            <button className="bg-gradient-to-r from-emerald-600 to-slate-800 bg-clip-text text-2xl font-extrabold text-transparent">
+              Scheduling
+            </button>
+          </a>
         </li>
         <li className="bg-gradient-to-r from-emerald-600 to-slate-800 bg-clip-text text-2xl font-extrabold text-transparent">
           Ordering

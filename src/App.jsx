@@ -9,6 +9,7 @@ import Lemonade from "./components/Lemonade";
 import Tea from "./components/Tea";
 import Total from "./components/Total";
 import NavBar from "./components/NavBar";
+import Packages from "./components/Packages";
 
 function App() {
   const [coffeeState, setCoffee] = useState([]);
@@ -69,7 +70,7 @@ function App() {
     <>
       <NavBar />
       <div className="flex-col bg-gradient-to-r from-gray-300 to-emerald-600 font-serif">
-        <Coffee
+        {/* <Coffee
           onClick={coffeeClick}
           tonClick={totalClick}
           subtotal={coffeeState}
@@ -99,7 +100,8 @@ function App() {
           onClick={hardwareClick}
           tonClick={totalClick}
           subtotal={hardwareState}
-        />
+        /> */}
+        <Packages />
         <Total
           total={
             Number(coffeeState) +
