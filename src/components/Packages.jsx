@@ -12,10 +12,125 @@ export default function Packages({
   startotal,
   dtotal,
 }) {
+  const onClicks = (event) => {
+    event.preventDefault();
+    if (
+      event.target.BoxTwoten.checked &&
+      !event.target.BoxTwentythirty.checked &&
+      !event.target.BoxSixtyeighty.checked
+    ) {
+      OnBox(Number(event.target.numBoxTwo.value * 100));
+    } else if (
+      !event.target.BoxTwoten.checked &&
+      event.target.BoxTwentythirty.checked &&
+      !event.target.BoxSixtyeighty.checked
+    ) {
+      OnBox(Number(event.target.numBoxTwenty.value * 200));
+    } else if (
+      !event.target.BoxTwoten.checked &&
+      !event.target.BoxTwentythirty.checked &&
+      event.target.BoxSixtyeighty.checked
+    ) {
+      OnBox(Number(event.target.numBoxSixty.value * 300));
+    } else if (
+      event.target.BoxTwoten.checked &&
+      event.target.BoxTwentythirty.checked &&
+      !event.target.BoxSixtyeighty.checked
+    ) {
+      OnBox(
+        Number(event.target.numBoxTwo.value * 100) +
+          Number(event.target.numBoxTwenty.value * 200)
+      );
+    } else if (
+      !event.target.BoxTwoten.checked &&
+      event.target.BoxTwentythirty.checked &&
+      event.target.BoxSixtyeighty.checked
+    ) {
+      OnBox(
+        Number(event.target.numBoxTwenty.value * 200) +
+          Number(event.target.numBoxSixty.value * 300)
+      );
+    } else if (
+      event.target.BoxTwoten.checked &&
+      !event.target.BoxTwentythirty.checked &&
+      event.target.BoxSixtyeighty.checked
+    ) {
+      OnBox(
+        Number(event.target.numBoxSixty.value * 300) +
+          Number(event.target.numBoxTwo.value * 100)
+      );
+    } else if (
+      event.target.BoxTwoten.checked &&
+      event.target.BoxTwentythirty.checked &&
+      event.target.BoxSixtyeighty.checked
+    ) {
+      OnBox(
+        Number(event.target.numBoxSixty.value * 300) +
+          Number(event.target.numBoxTwo.value * 100) +
+          Number(event.target.numBoxTwenty.value * 200)
+      );
+    }
+    if (
+        event.target.OutTwoten.checked &&
+        !event.target.OutTwentythirty.checked &&
+        !event.target.OutSixtyeighty.checked
+      ) {
+        OnOut(Number(event.target.numOutTwo.value * 100));
+      } else if (
+        !event.target.OutTwoten.checked &&
+        event.target.OutTwentythirty.checked &&
+        !event.target.OutSixtyeighty.checked
+      ) {
+        OnOut(Number(event.target.numOutTwenty.value * 200));
+      } else if (
+        !event.target.OutTwoten.checked &&
+        !event.target.OutTwentythirty.checked &&
+        event.target.OutSixtyeighty.checked
+      ) {
+        OnOut(Number(event.target.numOutSixty.value * 300));
+      } else if (
+        event.target.OutTwoten.checked &&
+        event.target.OutTwentythirty.checked &&
+        !event.target.OutSixtyeighty.checked
+      ) {
+        OnOut(
+          Number(event.target.numOutTwo.value * 100) +
+            Number(event.target.numOutTwenty.value * 200)
+        );
+      } else if (
+        !event.target.OutTwoten.checked &&
+        event.target.OutTwentythirty.checked &&
+        event.target.OutSixtyeighty.checked
+      ) {
+        OnOut(
+          Number(event.target.numOutTwenty.value * 200) +
+            Number(event.target.numOutSixty.value * 300)
+        );
+      } else if (
+        event.target.OutTwoten.checked &&
+        !event.target.OutTwentythirty.checked &&
+        event.target.OutSixtyeighty.checked
+      ) {
+        OnOut(
+          Number(event.target.numOutSixty.value * 300) +
+            Number(event.target.numOutTwo.value * 100)
+        );
+      } else if (
+        event.target.OutTwoten.checked &&
+        event.target.OutTwentythirty.checked &&
+        event.target.OutSixtyeighty.checked
+      ) {
+        OnOut(
+          Number(event.target.numOutSixty.value * 300) +
+            Number(event.target.numOutTwo.value * 100) +
+            Number(event.target.numOutTwenty.value * 200)
+        );
+      }
+  };
   return (
     <div className="m-4 mx-auto max-w-md overflow-hidden rounded border-4 border-gray-600 bg-emerald-300 shadow-2xl">
       <h2>Packages</h2>
-      <form>
+      <form onSubmit={onClicks}>
         <div className="m-4 mx-auto max-w-sm flex-col overflow-hidden rounded bg-slate-300 text-center shadow-2xl">
           <h3>Box Seats</h3>
           <img src={ChocolateMilk} alt="Pic of Nitros, Fraps, Lemonades"></img>
@@ -32,7 +147,7 @@ export default function Packages({
               value="BoxTwoten"
             />
             <label className=" self-center" htmlFor="BoxTwoten">
-              2-10
+              2 - 10
             </label>
 
             <input
@@ -46,7 +161,7 @@ export default function Packages({
               Number
             </label>
           </div>
-          <div>
+          <div className="flex  justify-evenly">
             <input
               className="m-1 self-center rounded-lg"
               type="checkbox"
@@ -69,7 +184,7 @@ export default function Packages({
               Number
             </label>
           </div>
-          <div>
+          <div className="flex  justify-evenly">
             <input
               className="m-1 self-center rounded-lg"
               type="checkbox"
@@ -92,6 +207,9 @@ export default function Packages({
               Number
             </label>
           </div>
+          <div className="m-4 mx-auto max-w-sm overflow-hidden rounded bg-slate-300 shadow-2xl">
+            <h2>subtotal: {boxtotal}</h2>
+          </div>
         </div>
         <div className="m-4 mx-auto max-w-sm flex-col overflow-hidden rounded bg-slate-300 text-center shadow-2xl">
           <h3>Outfield</h3>
@@ -112,7 +230,7 @@ export default function Packages({
               value="OutTwoten"
             />
             <label className=" self-center" htmlFor="OutTwoten">
-              2-10
+              2 - 10
             </label>
             <input
               className="m-1 self-center rounded-lg"
@@ -125,7 +243,7 @@ export default function Packages({
               Number
             </label>
           </div>
-          <div>
+          <div className="flex  justify-evenly">
             <input
               className="m-1 self-center rounded-lg"
               type="checkbox"
@@ -147,7 +265,7 @@ export default function Packages({
               Number
             </label>
           </div>
-          <div>
+          <div className="flex  justify-evenly">
             <input
               className="m-1 self-center rounded-lg"
               type="checkbox"
@@ -169,6 +287,9 @@ export default function Packages({
               Number
             </label>
           </div>
+          <div className="m-4 mx-auto max-w-sm overflow-hidden rounded bg-slate-300 shadow-2xl">
+            <h2>subtotal: {outtotal}</h2>
+          </div>
         </div>
         <div className="m-4 mx-auto max-w-sm flex-col overflow-hidden rounded bg-slate-300 text-center shadow-2xl">
           <h3>Upper Deck</h3>
@@ -186,7 +307,7 @@ export default function Packages({
               value="DeckTwoten"
             />
             <label className=" self-center" htmlFor="DeckTwoten">
-              2-10
+              2 - 10
             </label>
 
             <input
@@ -200,7 +321,7 @@ export default function Packages({
               Number
             </label>
           </div>
-          <div>
+          <div className="flex  justify-evenly">
             <input
               className="m-1 self-center rounded-lg"
               type="checkbox"
@@ -223,7 +344,7 @@ export default function Packages({
               Number
             </label>
           </div>
-          <div>
+          <div className="flex  justify-evenly">
             <input
               className="m-1 self-center rounded-lg"
               type="checkbox"
@@ -262,7 +383,7 @@ export default function Packages({
               value="AllTwoten"
             />
             <label className=" self-center" htmlFor="AllTwoten">
-              2-10
+              2 - 10
             </label>
 
             <input
@@ -276,7 +397,7 @@ export default function Packages({
               Number
             </label>
           </div>
-          <div>
+          <div className="flex  justify-evenly">
             <input
               className="m-1 self-center rounded-lg"
               type="checkbox"
@@ -299,7 +420,7 @@ export default function Packages({
               Number
             </label>
           </div>
-          <div>
+          <div className="flex  justify-evenly">
             <input
               className="m-1 self-center rounded-lg"
               type="checkbox"
@@ -424,13 +545,13 @@ export default function Packages({
 }
 Packages.propTypes = {
   boxtotal: PropTypes.number,
-  onBox: PropTypes.any,
+  OnBox: PropTypes.any,
   outtotal: PropTypes.number,
-  onOut: PropTypes.any,
+  OnOut: PropTypes.any,
   decktotal: PropTypes.number,
-  onDeck: PropTypes.any,
+  OnDeck: PropTypes.any,
   startotal: PropTypes.number,
-  onStar: PropTypes.any,
+  OnStar: PropTypes.any,
   dtotal: PropTypes.number,
-  onD: PropTypes.any,
+  OnD: PropTypes.any,
 };
