@@ -71,61 +71,229 @@ export default function Packages({
       );
     }
     if (
-        event.target.OutTwoten.checked &&
-        !event.target.OutTwentythirty.checked &&
-        !event.target.OutSixtyeighty.checked
-      ) {
-        OnOut(Number(event.target.numOutTwo.value * 100));
-      } else if (
-        !event.target.OutTwoten.checked &&
-        event.target.OutTwentythirty.checked &&
-        !event.target.OutSixtyeighty.checked
-      ) {
-        OnOut(Number(event.target.numOutTwenty.value * 200));
-      } else if (
-        !event.target.OutTwoten.checked &&
-        !event.target.OutTwentythirty.checked &&
-        event.target.OutSixtyeighty.checked
-      ) {
-        OnOut(Number(event.target.numOutSixty.value * 300));
-      } else if (
-        event.target.OutTwoten.checked &&
-        event.target.OutTwentythirty.checked &&
-        !event.target.OutSixtyeighty.checked
-      ) {
-        OnOut(
+      event.target.OutTwoten.checked &&
+      !event.target.OutTwentythirty.checked &&
+      !event.target.OutSixtyeighty.checked
+    ) {
+      OnOut(Number(event.target.numOutTwo.value * 100));
+    } else if (
+      !event.target.OutTwoten.checked &&
+      event.target.OutTwentythirty.checked &&
+      !event.target.OutSixtyeighty.checked
+    ) {
+      OnOut(Number(event.target.numOutTwenty.value * 200));
+    } else if (
+      !event.target.OutTwoten.checked &&
+      !event.target.OutTwentythirty.checked &&
+      event.target.OutSixtyeighty.checked
+    ) {
+      OnOut(Number(event.target.numOutSixty.value * 300));
+    } else if (
+      event.target.OutTwoten.checked &&
+      event.target.OutTwentythirty.checked &&
+      !event.target.OutSixtyeighty.checked
+    ) {
+      OnOut(
+        Number(event.target.numOutTwo.value * 100) +
+          Number(event.target.numOutTwenty.value * 200)
+      );
+    } else if (
+      !event.target.OutTwoten.checked &&
+      event.target.OutTwentythirty.checked &&
+      event.target.OutSixtyeighty.checked
+    ) {
+      OnOut(
+        Number(event.target.numOutTwenty.value * 200) +
+          Number(event.target.numOutSixty.value * 300)
+      );
+    } else if (
+      event.target.OutTwoten.checked &&
+      !event.target.OutTwentythirty.checked &&
+      event.target.OutSixtyeighty.checked
+    ) {
+      OnOut(
+        Number(event.target.numOutSixty.value * 300) +
+          Number(event.target.numOutTwo.value * 100)
+      );
+    } else if (
+      event.target.OutTwoten.checked &&
+      event.target.OutTwentythirty.checked &&
+      event.target.OutSixtyeighty.checked
+    ) {
+      OnOut(
+        Number(event.target.numOutSixty.value * 300) +
           Number(event.target.numOutTwo.value * 100) +
-            Number(event.target.numOutTwenty.value * 200)
-        );
-      } else if (
-        !event.target.OutTwoten.checked &&
-        event.target.OutTwentythirty.checked &&
-        event.target.OutSixtyeighty.checked
-      ) {
-        OnOut(
-          Number(event.target.numOutTwenty.value * 200) +
-            Number(event.target.numOutSixty.value * 300)
-        );
-      } else if (
-        event.target.OutTwoten.checked &&
-        !event.target.OutTwentythirty.checked &&
-        event.target.OutSixtyeighty.checked
-      ) {
-        OnOut(
-          Number(event.target.numOutSixty.value * 300) +
-            Number(event.target.numOutTwo.value * 100)
-        );
-      } else if (
-        event.target.OutTwoten.checked &&
-        event.target.OutTwentythirty.checked &&
-        event.target.OutSixtyeighty.checked
-      ) {
-        OnOut(
-          Number(event.target.numOutSixty.value * 300) +
-            Number(event.target.numOutTwo.value * 100) +
-            Number(event.target.numOutTwenty.value * 200)
-        );
-      }
+          Number(event.target.numOutTwenty.value * 200)
+      );
+    }
+    if (
+      event.target.DeckTwoten.checked &&
+      !event.target.DeckTwentythirty.checked &&
+      !event.target.DeckSixtyeighty.checked
+    ) {
+      OnDeck(Number(event.target.numDeckTwo.value * 100));
+    } else if (
+      !event.target.DeckTwoten.checked &&
+      event.target.DeckTwentythirty.checked &&
+      !event.target.DeckSixtyeighty.checked
+    ) {
+      OnDeck(Number(event.target.numDeckTwenty.value * 200));
+    } else if (
+      !event.target.DeckTwoten.checked &&
+      !event.target.DeckTwentythirty.checked &&
+      event.target.DeckSixtyeighty.checked
+    ) {
+      OnDeck(Number(event.target.numDeckSixty.value * 300));
+    } else if (
+      event.target.DeckTwoten.checked &&
+      event.target.DeckTwentythirty.checked &&
+      !event.target.DeckSixtyeighty.checked
+    ) {
+      OnDeck(
+        Number(event.target.numDeckTwo.value * 100) +
+          Number(event.target.numDeckTwenty.value * 200)
+      );
+    } else if (
+      !event.target.DeckTwoten.checked &&
+      event.target.DeckTwentythirty.checked &&
+      event.target.DeckSixtyeighty.checked
+    ) {
+      OnDeck(
+        Number(event.target.numDeckTwenty.value * 200) +
+          Number(event.target.numDeckSixty.value * 300)
+      );
+    } else if (
+      event.target.DeckTwoten.checked &&
+      !event.target.DeckTwentythirty.checked &&
+      event.target.DeckSixtyeighty.checked
+    ) {
+      OnDeck(
+        Number(event.target.numDeckSixty.value * 300) +
+          Number(event.target.numDeckTwo.value * 100)
+      );
+    } else if (
+      event.target.DeckTwoten.checked &&
+      event.target.DeckTwentythirty.checked &&
+      event.target.DeckSixtyeighty.checked
+    ) {
+      OnDeck(
+        Number(event.target.numDeckSixty.value * 300) +
+          Number(event.target.numDeckTwo.value * 100) +
+          Number(event.target.numDeckTwenty.value * 200)
+      );
+    }
+    if (
+      event.target.AllTwoten.checked &&
+      !event.target.AllTwentythirty.checked &&
+      !event.target.AllSixtyeighty.checked
+    ) {
+      OnStar(Number(event.target.numAllTwo.value * 100));
+    } else if (
+      !event.target.AllTwoten.checked &&
+      event.target.AllTwentythirty.checked &&
+      !event.target.AllSixtyeighty.checked
+    ) {
+      OnStar(Number(event.target.numAllTwenty.value * 200));
+    } else if (
+      !event.target.AllTwoten.checked &&
+      !event.target.AllTwentythirty.checked &&
+      event.target.AllSixtyeighty.checked
+    ) {
+      OnStar(Number(event.target.numAllSixty.value * 300));
+    } else if (
+      event.target.AllTwoten.checked &&
+      event.target.AllTwentythirty.checked &&
+      !event.target.AllSixtyeighty.checked
+    ) {
+      OnStar(
+        Number(event.target.numAllTwo.value * 100) +
+          Number(event.target.numAllTwenty.value * 200)
+      );
+    } else if (
+      !event.target.AllTwoten.checked &&
+      event.target.AllTwentythirty.checked &&
+      event.target.AllSixtyeighty.checked
+    ) {
+      OnStar(
+        Number(event.target.numAllTwenty.value * 200) +
+          Number(event.target.numAllSixty.value * 300)
+      );
+    } else if (
+      event.target.AllTwoten.checked &&
+      !event.target.AllTwentythirty.checked &&
+      event.target.AllSixtyeighty.checked
+    ) {
+      OnStar(
+        Number(event.target.numAllSixty.value * 300) +
+          Number(event.target.numAllTwo.value * 100)
+      );
+    } else if (
+      event.target.AllTwoten.checked &&
+      event.target.AllTwentythirty.checked &&
+      event.target.AllSixtyeighty.checked
+    ) {
+      OnStar(
+        Number(event.target.numAllSixty.value * 300) +
+          Number(event.target.numAllTwo.value * 100) +
+          Number(event.target.numAllTwenty.value * 200)
+      );
+    }
+    if (
+      event.target.HitTwoten.checked &&
+      !event.target.HitTwentythirty.checked &&
+      !event.target.HitSixtyeighty.checked
+    ) {
+      OnD(Number(event.target.numHitTwo.value * 100));
+    } else if (
+      !event.target.HitTwoten.checked &&
+      event.target.HitTwentythirty.checked &&
+      !event.target.HitSixtyeighty.checked
+    ) {
+      OnD(Number(event.target.numHitTwenty.value * 200));
+    } else if (
+      !event.target.HitTwoten.checked &&
+      !event.target.HitTwentythirty.checked &&
+      event.target.HitSixtyeighty.checked
+    ) {
+      OnD(Number(event.target.numHitSixty.value * 300));
+    } else if (
+      event.target.HitTwoten.checked &&
+      event.target.HitTwentythirty.checked &&
+      !event.target.HitSixtyeighty.checked
+    ) {
+      OnD(
+        Number(event.target.numHitTwo.value * 100) +
+          Number(event.target.numHitTwenty.value * 200)
+      );
+    } else if (
+      !event.target.HitTwoten.checked &&
+      event.target.HitTwentythirty.checked &&
+      event.target.HitSixtyeighty.checked
+    ) {
+      OnD(
+        Number(event.target.numHitTwenty.value * 200) +
+          Number(event.target.numHitSixty.value * 300)
+      );
+    } else if (
+      event.target.HitTwoten.checked &&
+      !event.target.HitTwentythirty.checked &&
+      event.target.HitSixtyeighty.checked
+    ) {
+      OnD(
+        Number(event.target.numHitSixty.value * 300) +
+          Number(event.target.numHitTwo.value * 100)
+      );
+    } else if (
+      event.target.HitTwoten.checked &&
+      event.target.HitTwentythirty.checked &&
+      event.target.HitSixtyeighty.checked
+    ) {
+      OnD(
+        Number(event.target.numHitSixty.value * 300) +
+          Number(event.target.numHitTwo.value * 100) +
+          Number(event.target.numHitTwenty.value * 200)
+      );
+    }
   };
   return (
     <div className="m-4 mx-auto max-w-md overflow-hidden rounded border-4 border-gray-600 bg-emerald-300 shadow-2xl">
@@ -158,7 +326,7 @@ export default function Packages({
               placeholder="#"
             />
             <label className=" self-center" htmlFor="numBoxTwo">
-              Number
+              # Packages
             </label>
           </div>
           <div className="flex  justify-evenly">
@@ -181,7 +349,7 @@ export default function Packages({
               placeholder="#"
             />
             <label className=" self-center" htmlFor="numBoxTwenty">
-              Number
+              # Packages
             </label>
           </div>
           <div className="flex  justify-evenly">
@@ -204,7 +372,7 @@ export default function Packages({
               placeholder="#"
             />
             <label className=" self-center" htmlFor="numBoxSixty">
-              Number
+              # Packages
             </label>
           </div>
           <div className="m-4 mx-auto max-w-sm overflow-hidden rounded bg-slate-300 shadow-2xl">
@@ -240,7 +408,7 @@ export default function Packages({
               placeholder="#"
             />
             <label className=" self-center" htmlFor="numOutTwo">
-              Number
+              # Packages
             </label>
           </div>
           <div className="flex  justify-evenly">
@@ -262,7 +430,7 @@ export default function Packages({
               placeholder="#"
             />
             <label className=" self-center" htmlFor="numOutTwenty">
-              Number
+              # Packages
             </label>
           </div>
           <div className="flex  justify-evenly">
@@ -284,7 +452,7 @@ export default function Packages({
               placeholder="#"
             />
             <label className=" self-center" htmlFor="numOutSixty">
-              Number
+              # Packages
             </label>
           </div>
           <div className="m-4 mx-auto max-w-sm overflow-hidden rounded bg-slate-300 shadow-2xl">
@@ -318,7 +486,7 @@ export default function Packages({
               placeholder="#"
             />
             <label className=" self-center" htmlFor="numDeckTwo">
-              Number
+              # Packages
             </label>
           </div>
           <div className="flex  justify-evenly">
@@ -341,7 +509,7 @@ export default function Packages({
               placeholder="#"
             />
             <label className=" self-center" htmlFor="numDeckTwenty">
-              Number
+              # Packages
             </label>
           </div>
           <div className="flex  justify-evenly">
@@ -364,8 +532,11 @@ export default function Packages({
               placeholder="#"
             />
             <label className=" self-center" htmlFor="numDeckSixty">
-              Number
+              # Packages
             </label>
+          </div>
+          <div className="m-4 mx-auto max-w-sm overflow-hidden rounded bg-slate-300 shadow-2xl">
+            <h2>subtotal: {decktotal}</h2>
           </div>
         </div>
         <div className="m-4 mx-auto max-w-sm flex-col overflow-hidden rounded bg-slate-300 text-center shadow-2xl">
@@ -394,7 +565,7 @@ export default function Packages({
               placeholder="#"
             />
             <label className=" self-center" htmlFor="numAllTwo">
-              Number
+              # Packages
             </label>
           </div>
           <div className="flex  justify-evenly">
@@ -417,7 +588,7 @@ export default function Packages({
               placeholder="#"
             />
             <label className=" self-center" htmlFor="numAllTwenty">
-              Number
+              # Packages
             </label>
           </div>
           <div className="flex  justify-evenly">
@@ -440,8 +611,11 @@ export default function Packages({
               placeholder="#"
             />
             <label className=" self-center" htmlFor="numAllSixty">
-              Number
+              # Packages
             </label>
+          </div>
+          <div className="m-4 mx-auto max-w-sm overflow-hidden rounded bg-slate-300 shadow-2xl">
+            <h2>subtotal: {startotal}</h2>
           </div>
         </div>
         <div className="m-4 mx-auto max-w-sm flex-col overflow-hidden rounded bg-slate-300 text-center shadow-2xl">
@@ -471,7 +645,7 @@ export default function Packages({
               placeholder="#"
             />
             <label className=" self-center" htmlFor="numHitTwo">
-              Number
+              # Packages
             </label>
           </div>
           <div className="flex  justify-evenly">
@@ -494,7 +668,7 @@ export default function Packages({
               placeholder="#"
             />
             <label className=" self-center" htmlFor="numHitTwenty">
-              Number
+              # Packages
             </label>
           </div>
           <div className="flex  justify-evenly">
@@ -517,8 +691,11 @@ export default function Packages({
               placeholder="#"
             />
             <label className=" self-center" htmlFor="numHitSixty">
-              Number
+              # Packages
             </label>
+          </div>
+          <div className="m-4 mx-auto max-w-sm overflow-hidden rounded bg-slate-300 shadow-2xl">
+            <h2>subtotal: {dtotal}</h2>
           </div>
         </div>
         <div className="flex-col text-center">
