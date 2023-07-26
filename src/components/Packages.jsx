@@ -6,11 +6,13 @@ export default function Packages({
   OnDeck,
   OnStar,
   OnD,
+  OnHour,
   boxtotal,
   outtotal,
   decktotal,
   startotal,
   dtotal,
+  hourtotal,
 }) {
   const onClicks = (event) => {
     event.preventDefault();
@@ -293,6 +295,9 @@ export default function Packages({
           Number(event.target.numHitTwo.value * 100) +
           Number(event.target.numHitTwenty.value * 200)
       );
+    }
+    if(event.target.Hourscart.value){
+      OnHour(Number(event.target.Hourscart.value)*25)
     }
   };
   return (
@@ -731,4 +736,6 @@ Packages.propTypes = {
   OnStar: PropTypes.any,
   dtotal: PropTypes.number,
   OnD: PropTypes.any,
+  hourtotal: PropTypes.number,
+  OnHour: PropTypes.any,
 };
