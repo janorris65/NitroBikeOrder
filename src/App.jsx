@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Total from "./components/Total";
 import NavBar from "./components/NavBar";
-import Packages from "./components/Packages";
 import PackComponent from "./components/PackComponent";
 import ChocolateMilk from "../assets/IMG_5845.jpg";
 
