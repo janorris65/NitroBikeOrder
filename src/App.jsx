@@ -2,7 +2,7 @@ import { useState } from "react";
 import Total from "./components/Total";
 import NavBar from "./components/NavBar";
 import PackComponent from "./components/PackComponent";
-import ChocolateMilk from "../assets/IMG_5845.jpg";
+import ChocolateMilk from "../assets/ChocolateMilk.jpg";
 
 function App() {
   const [boxState, setboxState] = useState([]);
