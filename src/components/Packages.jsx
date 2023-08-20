@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import ChocolateMilk from "../../assets/IMG_5845.jpg";
+import { ChocolateMilk, bike1, bike2, nitro } from "../../assets/index";
 export default function Packages({
   OnBox,
   OnOut,
@@ -296,17 +296,24 @@ export default function Packages({
           Number(event.target.numHitTwenty.value * 200)
       );
     }
-    if(event.target.Hourscart.value){
-      OnHour(Number(event.target.Hourscart.value)*25)
+    if (event.target.Hourscart.value) {
+      OnHour(Number(event.target.Hourscart.value) * 25);
     }
   };
   return (
     <div className="m-4 mx-auto max-w-md overflow-hidden rounded border-4 border-gray-600 bg-emerald-300 shadow-2xl">
       <h2>Packages</h2>
       <form onSubmit={onClicks}>
-        <div className="m-4 mx-auto max-w-sm flex-col overflow-hidden rounded bg-slate-300 text-center shadow-2xl">
+        <div
+          className="group m-2 mx-auto flex max-w-sm flex-col overflow-hidden rounded-lg bg-stone-200 p-2 text-center
+          shadow-2xl"
+        >
           <h3>Box Seats</h3>
-          <img src={ChocolateMilk} alt="Pic of Nitros, Fraps, Lemonades"></img>
+          <img
+            src={bike1}
+            className="h-[200px] rounded-lg object-cover"
+            alt="Pic of Nitros, Fraps, Lemonades"
+          ></img>
           <p>
             Enjoy the best of the experience. Rich Nitro Cold Brew, Cold
             Frappuccinos, and Refreshing Lemonades
@@ -384,11 +391,15 @@ export default function Packages({
             <h2>subtotal: {boxtotal}</h2>
           </div>
         </div>
-        <div className="m-4 mx-auto max-w-sm flex-col overflow-hidden rounded bg-slate-300 text-center shadow-2xl">
+        <div
+          className="group m-2 mx-auto flex max-w-sm flex-col overflow-hidden rounded-lg bg-stone-200 p-2 text-center
+                shadow-2xl"
+        >
           <h3>Outfield</h3>
           <img
-            src={ChocolateMilk}
+            src={bike2}
             alt="Pic of Iced Cold Brews, Fraps, Lemonades"
+            className="h-[200px] rounded-lg object-cover"
           ></img>
           <p>
             Enjoy the excitement to front row big events with Iced Cold Brew,
@@ -464,11 +475,15 @@ export default function Packages({
             <h2>subtotal: {outtotal}</h2>
           </div>
         </div>
-        <div className="m-4 mx-auto max-w-sm flex-col overflow-hidden rounded bg-slate-300 text-center shadow-2xl">
+        <div
+          className="group m-2 mx-auto flex max-w-sm flex-col overflow-hidden rounded-lg bg-stone-200 p-2 text-center
+                shadow-2xl"
+        >
           <h3>Upper Deck</h3>
           <img
-            src={ChocolateMilk}
+            src={nitro}
             alt="Pic of Iced Cold Brews and Lemonades"
+            className="h-[200px] rounded-lg object-cover"
           ></img>
           <p>Take it all in! Enjoy Rich Iced Cold Brew and Sweet Lemonades</p>
           <div className="flex  justify-evenly">
@@ -544,9 +559,16 @@ export default function Packages({
             <h2>subtotal: {decktotal}</h2>
           </div>
         </div>
-        <div className="m-4 mx-auto max-w-sm flex-col overflow-hidden rounded bg-slate-300 text-center shadow-2xl">
+        <div
+          className="group m-2 mx-auto flex max-w-sm flex-col overflow-hidden rounded-lg bg-stone-200 p-2 text-center
+                shadow-2xl"
+        >
           <h3>All Star Break</h3>
-          <img src={ChocolateMilk} alt="Pic of Fraps and Lemonades"></img>
+          <img
+            src={ChocolateMilk}
+            alt="Pic of Fraps and Lemonades"
+            className="h-[200px] rounded-lg object-cover"
+          ></img>
           <p>
             Sit back and relax! Enjoy Refreshing Lemonades and Cold Frappuccinos
           </p>
@@ -623,9 +645,16 @@ export default function Packages({
             <h2>subtotal: {startotal}</h2>
           </div>
         </div>
-        <div className="m-4 mx-auto max-w-sm flex-col overflow-hidden rounded bg-slate-300 text-center shadow-2xl">
+        <div
+          className="group m-2 mx-auto flex max-w-sm flex-col overflow-hidden rounded-lg bg-stone-200 p-2 text-center
+          shadow-2xl"
+        >
           <h3>Designated Hitter</h3>
-          <img src={ChocolateMilk} alt="Pic of Nitros, Lemonades"></img>
+          <img
+            src={ChocolateMilk}
+            alt="Pic of Fraps and Lemonades"
+            className="h-[200px] rounded-lg object-cover"
+          ></img>
           <p>
             Classic Clutch Performance. Rich Nitro Cold Brew and Refreshing
             Lemonades
