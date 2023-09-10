@@ -3,6 +3,7 @@ import Total from "./components/Total";
 import NavBar from "./components/NavBar";
 import PackComponent from "./components/PackComponent";
 import ChocolateMilk from "../assets/ChocolateMilk.jpg";
+import Faq from "./components/FAQ";
 
 function App() {
   const [boxState, setboxState] = useState([]);
@@ -29,7 +30,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <div className="flex-col bg-gradient-to-r from-gray-300 to-emerald-600 font-serif">
+      <div className="flex-col bg-gradient-to-r from-gray-300 to-emerald-600 text-center font-serif">
         <Total
           total={
             Number(boxState) +
@@ -39,6 +40,7 @@ function App() {
             Number(dState)
           }
         />
+        <Faq />
         <div className="m-4 mx-auto max-w-md overflow-hidden rounded border-4 border-gray-600 bg-emerald-300 shadow-2xl">
           <h2>Packages</h2>
           <PackComponent
