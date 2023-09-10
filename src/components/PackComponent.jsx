@@ -33,10 +33,13 @@ export default function PackComponent({
         .checked
     ) {
       OnPack(
-        Number(
-          event.target.parentNode.parentNode.querySelector("#numBoxTwenty")
-            ?.value * PriceA
-        )
+        Math.floor(
+          100 *
+            Number(
+              event.target.parentNode.parentNode.querySelector("#numBoxTwenty")
+                ?.value * PriceA
+            )
+        ) / 100
       );
     } else if (
       !event.target.parentNode.parentNode.querySelector("#BoxTwentythirty")
@@ -45,10 +48,13 @@ export default function PackComponent({
         .checked
     ) {
       OnPack(
-        Number(
-          event.target.parentNode.parentNode.querySelector("#numBoxSixty")
-            ?.value * PriceB
-        )
+        Math.floor(
+          100 *
+            Number(
+              event.target.parentNode.parentNode.querySelector("#numBoxSixty")
+                ?.value * PriceB
+            )
+        ) / 100
       );
     } else if (
       event.target.parentNode.parentNode.querySelector("#BoxTwentythirty")
@@ -57,14 +63,17 @@ export default function PackComponent({
         .checked
     ) {
       OnPack(
-        Number(
-          event.target.parentNode.parentNode.querySelector("#numBoxTwenty")
-            ?.value * PriceA
-        ) +
-          Number(
-            event.target.parentNode.parentNode.querySelector("#numBoxSixty")
-              ?.value * PriceB
-          )
+        Math.floor(
+          100 *
+            (Number(
+              event.target.parentNode.parentNode.querySelector("#numBoxTwenty")
+                ?.value * PriceA
+            ) +
+              Number(
+                event.target.parentNode.parentNode.querySelector("#numBoxSixty")
+                  ?.value * PriceB
+              ))
+        ) / 100
       );
     } else {
       OnPack(0);
