@@ -9,7 +9,7 @@ export default function Faq() {
     <>
       <button
         onClick={onClicks}
-        className="mx-auto w-1/3 rounded-3xl bg-emerald-500 px-4 py-2  font-bold text-white hover:bg-emerald-400"
+        className="min-w-full rounded-3xl bg-emerald-500 px-4 py-2 font-bold  text-white hover:bg-emerald-400 sm:min-w-[50%]"
       >
         <h3>
           FAQ <span>{click ? "+" : "-"}</span>
