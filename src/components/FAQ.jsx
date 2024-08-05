@@ -22,7 +22,7 @@ export default function Faq() {
             Packages are sized by the approximate number of guests to serve.
             Choose the package type(s) and number of packages for an estimate.
             Check Scheduling to see if your date is available.
-            (underconstruction) Contact: Call/Text (704)941-8431 for further
+            (underconstruction) Contact: Call/Text (217)720-3456 for further
             details.
           </div>
         </div>

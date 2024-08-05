@@ -1,9 +1,9 @@
 {
     "css.validate": false,
     "editor.codeActionsOnSave": {
-      "addMissingImports": true,
-      "source.fixAll": true,
-      "source.organizeImports": true
+      "addMissingImports": "explicit",
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
     },
     "editor.bracketPairColorization.enabled": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
